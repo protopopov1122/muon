@@ -1,0 +1,11 @@
+{
+    "url": {
+        "api": "http://localhost:9000/api/v1",
+        "static": "http://localhost:9000/api/v1/static"
+    },
+    "ui": {
+        "loadingDialogTimeout": 700,
+        "email": "anByb3RvcG9wb3YxMTIyQGdtYWlsLmNvbQ==",
+        "languages": ["en", "ru"]
+    }
+}

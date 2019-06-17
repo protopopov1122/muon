@@ -1,0 +1,17 @@
+{
+  "menu": [
+    {
+      "label": "menu.aboutMe",
+      "path": "about/me"
+    },
+    {
+      "label": "menu.projects",
+      "path": "info/projects"
+    },
+    {
+      "label": "menu.aboutSite",
+      "path": "about/site"
+    }
+  ],
+  "home": "about/me"
+}

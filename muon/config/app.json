@@ -1,0 +1,11 @@
+{
+    "url": {
+        "api": "/api/v1",
+        "static": "/static"
+    },
+    "ui": {
+        "loadingDialogTimeout": 700,
+        "email": "anByb3RvcG9wb3YxMTIyQGdtYWlsLmNvbQ==",
+        "languages": ["en", "ru"]
+    }
+}

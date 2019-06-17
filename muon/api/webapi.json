@@ -1,0 +1,25 @@
+{
+  "version": "0.0.1",
+  "logging": true,
+  "host": {
+    "name": "localhost",
+    "port": 9000
+  },
+  "render": {
+    "root": "../public/content",
+    "extension": "md",
+    "preview": {
+      "length": 100,
+      "cut": "..."
+    },
+    "directory": {
+      "header": "header.md.inc",
+      "footer": "footer.md.inc",
+      "index": "index.md"
+    }
+  },
+  "static": {
+    "root": "../public/static",
+    "serve": true
+  }
+}

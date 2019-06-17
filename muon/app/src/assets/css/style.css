@@ -1,0 +1,33 @@
+@import './fonts.css';
+
+body {
+    font-family: 'Roboto Slab', serif;
+}
+
+.app-background {
+    background-color: #ffffee;
+}
+
+.loading-backdrop-background {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.loading-dialog-background {
+    background-color: white;
+}
+
+.content-text-color {
+    color: black;
+}
+
+.theme-background {
+    background-color: #1f2b3f;
+}
+
+.theme-text-color {
+    color: white;
+}
+
+.cursive-font {
+    font-family: 'Caveat', cursive;
+}

@@ -1,0 +1,25 @@
+{
+    "title": "Jevgenij's website",
+    "header": {
+        "title": "Jevgenij's personal website",
+        "subtitle": "Dereferencing NULL since 1997"
+    },
+    "footer": {
+        "copyright": "Copyright Jevgēnijs Protopopovs, 2019",
+        "contactLink": "Contact me"
+    },
+    "error": {
+        "notFound": "Resource {0} not found"
+    },
+    "preview": {
+        "readMore": "Read more"
+    },
+    "message": {
+        "firstVisit": "This website uses browser local storage. See 'About site' for details"
+    },
+    "menu": {
+        "aboutMe": "About me",
+        "projects": "Projects",
+        "aboutSite": "About site"
+    }
+}
