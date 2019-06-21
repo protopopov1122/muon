@@ -72,6 +72,12 @@ export default {
             for (let key of Object.keys(this.variables)) {
                 text = text.replace(new RegExp(`%${key}%`, 'g'), this.variables[key])
             }
+            const base64Regex = /%base64:[A-Za-z0-9+/=]+%/g
+            const matched = text.match(base64Regex) || []
+            for (let match of matched) {
+                const b64 = match.substring(8, match.length - 1)
+                text = text.replace(match, atob(b64))
+            }
             return text
         }
     },
