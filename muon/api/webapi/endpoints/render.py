@@ -44,7 +44,8 @@ def render_file(file_path: pathlib.Path, url: str, length_limit: int = -1):
         return {
             'url': url,
             'complete': complete_file,
-            'content': mistune.markdown(file_content, escape=False)
+            'content': mistune.markdown(file_content, escape=False),
+            'fixed': False
         }
     except BaseException as ex:
         raise WebApiError(WebApiErrorCode.RenderingError, {
@@ -73,9 +74,13 @@ def render_directory(dir_path: pathlib.Path, url: str):
         header_path = dir_path / header_name
         footer_path = dir_path / footer_name
         if header_path.exists():
-            entries.insert(0, render_file(header_path, ''))
+            file = render_file(header_path, '')
+            file['fixed'] = True
+            entries.insert(0, file)
         if footer_path.exists():
-            entries.append(render_file(footer_path, ''))
+            file = render_file(footer_path, '')
+            file['fixed'] = True
+            entries.append(file)
         return entries
 
 
