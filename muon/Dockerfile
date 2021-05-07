@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-RUN apk add python3 nodejs yarn nginx
+RUN apk add python3 nodejs yarn nginx py3-pip
 RUN mkdir -p /srv/api/webapi /srv/app /srv/public /srv/files/static
 ADD start.sh /srv
 # Setup API
@@ -8,7 +8,7 @@ ADD api/webapi /srv/api/webapi
 ADD api/requirements.txt /srv/api
 ADD config/webapi.json /srv/api
 WORKDIR /srv/api
-RUN pip3 install -r requirements.txt
+RUN pip3 install --ignore-installed six -r requirements.txt
 # Setup application
 ADD app /srv/app/build
 ADD config/app.json /srv/app/build/src/config.json
@@ -33,6 +33,5 @@ RUN chown www:www /run/sockets
 RUN chown -R www:www /var/cache/nginx
 RUN chown -R www:www /var/log/nginx
 RUN chown -R www:www /var/lib/nginx
-RUN chown -R www:www /var/tmp/nginx
 USER www
 ENTRYPOINT ["./start.sh"]
