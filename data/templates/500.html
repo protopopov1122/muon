@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ localize .Page.Language "title" }}</title>
+        <link rel="stylesheet" href="/static/style.css" />
+    </head>
+
+    <body>
+        {{ template "header.html" . }}
+        <main>
+            <p>{{ localize .Page.Language "internalError" }}</p>
+        </main>
+        {{ template "footer.html" . }}
+    </body>
+</html>

@@ -1,0 +1,11 @@
+{
+    "defaultLanguage": "en",
+    "languages": ["en", "ru"],
+    "index": "/about/me",
+    "links": [
+        { "text": "aboutMe", "url": "/about/me" },
+        { "text": "projects", "url": "/info/projects" },
+        { "text": "aboutSite", "url": "/about/site" }
+    ],
+    "contactUri": "mailto:jprotopopov1122@gmail.com"
+}

@@ -1,0 +1,21 @@
+<header>
+    <h1 class="title">{{ localize $.Page.Language "title" }}</h1>
+    <div class="language">
+        {{ range $lang := .Page.Header.AvailableLanguages }}
+            {{ if (or (eq $lang $.Page.Language) (eq $.Page.CurrentArticlePath nil)) }}
+                <span>{{ localize $.Page.Language $lang }}</span>
+            {{ else }}
+                <span><a href="{{ articleUrl $lang $.Page.CurrentArticlePath}}">{{ localize $.Page.Language $lang }}</a></span>
+            {{ end }}
+        {{ end }}
+    </div>
+    <nav>
+        {{ range $link := .Page.Header.NavigationLinks }}
+            {{ if (eq $link.Url $.Page.CurrentArticlePath) }}
+                <span>{{ localize $.Page.Language $link.Text }}</span>
+            {{ else }}
+                <a href="{{ articleUrl $.Page.Language $link.Url }}">{{ localize $.Page.Language $link.Text }}</a>
+            {{ end }}
+        {{ end }}
+    </nav>
+</header>

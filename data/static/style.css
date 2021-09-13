@@ -1,0 +1,53 @@
+@font-face {
+    font-family: "Roboto";
+    src: url("/static/roboto.woff2");
+}
+
+body {
+    background-color: rgb(255, 255, 238);
+    margin: 0px;
+    height: 100vh;
+    font-family: "Roboto";
+    display: flex;
+    flex-direction: column;
+}
+
+header, footer {
+    background-color: rgb(31, 43, 63);
+    color: white;
+    flex-grow: 0;
+}
+
+header a, footer a {
+    color: lightgreen;
+}
+
+header {
+    padding: 10px 0px 5px 10px;
+}
+
+header .title {
+    font-size: 20pt;
+    margin: 0px;
+    display: inline-block;
+}
+
+header .language {
+    float: right;
+    padding-right: 20px;
+}
+
+footer {
+    padding: 2px 2px 7px 2px;
+}
+
+footer .contact {
+    float: right;
+    padding-right: 20px;
+}
+
+main {
+    flex-grow: 1;
+    overflow: auto;
+    padding: 10px 10px 10px 10px;
+}

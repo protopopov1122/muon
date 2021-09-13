@@ -1,0 +1,11 @@
+version: '3'
+services:
+  muon2:
+    build: .
+    ports:
+      - "${MUON_PORT}:8080"
+    volumes:
+      - "${MUON_I18N}:/app/data/i18n:ro"
+      - "${MUON_ARTICLES}:/app/data/articles:ro"
+      - "${MUON_FILES}:/app/data/static/files:ro"
+      - "${MUON_CONTENT}:/app/data/content.json:ro"
